@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data set</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Filter Block -->
+    <form id="filterForm">
+      <input
+        class="countryCheckbox"
+        type="checkbox"
+        name="country"
+        value="India"
+      />
+      India
+      <input
+        class="countryCheckbox"
+        type="checkbox"
+        name="country"
+        value="England"
+      />
+      England
+      <input
+        class="countryCheckbox"
+        type="checkbox"
+        name="country"
+        value="Australia"
+      />
+      Australia
+      <input
+        class="countryCheckbox"
+        type="checkbox"
+        name="country"
+        value="America"
+      />
+      America
+      <br />
+      <!-- City -->
+      <input class="cityCheckbox" type="checkbox" name="city" value="Chennai" />
+      Chennai
+      <input class="cityCheckbox" type="checkbox" name="city" value="Mumbai" />
+      Mumbai
+      <input class="cityCheckbox" type="checkbox" name="city" value="Delhi" />
+      Delhi
+      <input
+        class="cityCheckbox"
+        type="checkbox"
+        name="city"
+        value="Bangalore"
+      />
+      Bangalore
+      <input
+        class="cityCheckbox"
+        type="checkbox"
+        name="city"
+        value="New York"
+      />
+      New York
+      <input
+        class="cityCheckbox"
+        type="checkbox"
+        name="city"
+        value="Washington"
+      />
+      Washington
+      <input
+        class="cityCheckbox"
+        type="checkbox"
+        name="city"
+        value="Los Angeles"
+      />
+      Los Angeles
+      <input
+        class="cityCheckbox"
+        type="checkbox"
+        name="city"
+        value="California"
+      />
+      California
+      <br />
+      <!-- Salary -->
+      <select id="salaryDropDown">
+        <option class="detailsClass" value="21000-31000">21000-31000</option>
+        <option class="detailsClass" value="31000-41000">31000-41000</option>
+        <option class="detailsClass" value="41000-51000">41000-51000</option>
+      </select>
+      <!-- Age -->
+      <select id="ageDropDown">
+        <option class="detailsClass" value="20-30">20-30</option>
+        <option class="detailsClass" value="31-40">31-40</option>
+        <option class="detailsClass" value="41-50">41-50</option>
+      </select>
+
+      <input class="detailsClass" type="submit" value="Submit" />
+    </form>
+
+    <button class="resetButton" onclick="resetFilters()">Reset Filters</button>
+    <!-- Table Block -->
+    <div>
+      <input class="searchInput" id="searchInput" type="text" /><button
+        id="searchButton"
+        class="searchInput"
+        onclick="searchTable()"
+      >
+        Search
+      </button>
+    </div>
+    <table id="dataTable" border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office</th>
+          <th>Age</th>
+          <th>Start Date</th>
+          <th>Salary</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody id="dataTableBody"></tbody>
+    </table>
+
+    <!-- Pagination Block -->
+    <div id="paginationBlock"></div>
+
+    <script data-main="config" src="require.js"></script>
+    <script>
+      require(["config"], function () {
+        require(["app"]);
+      });
+    </script>
+  </body>
+</html>

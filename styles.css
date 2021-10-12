@@ -1,0 +1,22 @@
+.countryCheckbox {
+  padding: 5px;
+}
+.cityCheckbox {
+  margin-top: 20px;
+}
+.detailsClass {
+  margin-top: 20px;
+}
+.resetButton {
+  margin-top: 20px;
+}
+.searchInput {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#dataTable {
+  margin-bottom: 20px;
+}
+#paginationBlock {
+  margin-left: 200px;
+}
